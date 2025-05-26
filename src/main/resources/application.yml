@@ -1,0 +1,11 @@
+
+server:
+  port: 8080
+
+resilience4j:
+  ratelimiter:
+    instances:
+      apiLimiter:
+        limit-for-period: 5
+        limit-refresh-period: 10s
+        timeout-duration: 0
